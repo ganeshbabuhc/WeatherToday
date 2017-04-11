@@ -1,0 +1,18 @@
+<svg xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128">
+  <defs>
+    <linearGradient xlink:href="#a" id="c" x1="-272.09601" y1="461.12576" x2="-191.47139" y2="461.12576" gradientUnits="userSpaceOnUse"/>
+    <linearGradient id="a" osb:paint="solid">
+      <stop offset="0" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="d" x="-.1947466" width="1.3894932" y="-.13868085" height="1.2773618" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="4.622696"/>
+    </filter>
+    <linearGradient xlink:href="#b" id="e" gradientUnits="userSpaceOnUse" gradientTransform="translate(-287.784 -531.236)" x1="55.5" y1="932.36218" x2="55.5" y2="1052.8632"/>
+    <linearGradient id="b">
+      <stop offset="0" stop-color="#e0d9b5"/>
+      <stop offset="1" stop-color="#e0d9b5"/>
+    </linearGradient>
+  </defs>
+  <path d="M-220.26808 421.12575c-22.09139 0-40 17.90861-40 40 0 22.09142 17.90861 40.00002 40 40.00002 6.06904 0 11.81568-1.3626 16.96875-3.7813-13.60417-6.3852-23.03125-20.1964-23.03125-36.21872 0-16.02235 9.42708-29.83348 23.03125-36.21875-5.15307-2.41865-10.89971-3.78125-16.96875-3.78125z" opacity=".6" fill="url(#c)" filter="url(#d)" transform="translate(311.107 -427.61) scale(1.0661)"/>
+  <path d="M-220.26808 421.12575c-22.09139 0-40 17.90861-40 40 0 22.09142 17.90861 40.00002 40 40.00002 6.06904 0 11.81568-1.3626 16.96875-3.7813-13.60417-6.3852-23.03125-20.1964-23.03125-36.21872 0-16.02235 9.42708-29.83348 23.03125-36.21875-5.15307-2.41865-10.89971-3.78125-16.96875-3.78125z" fill="url(#e)" transform="translate(311.107 -427.61) scale(1.0661)"/>
+</svg>

@@ -1,0 +1,52 @@
+<md-dialog aria-label="Mango (Fruit)">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Weather by location</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+       <md-content class="md-padding">
+    <form ng-submit="$event.preventDefault()">
+      <md-autocomplete
+          ng-disabled="isDisabled"
+          md-no-cache="noCache"
+          md-selected-item="selectedItem"
+          md-search-text-change="searchTextChange(searchText)"
+          md-search-text="searchText"
+          md-selected-item-change="selectedItemChange(item)"
+          md-items="item in querySearch(searchText)"
+          md-item-text="item.display"
+          md-min-length="0"
+          placeholder="What is your favorite US state?">
+        <md-item-template>
+          <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.display}}</span>
+        </md-item-template>
+        <md-not-found>
+          No states matching "{{searchText}}" were found.
+          <a ng-click="newState(searchText)">Create a new one!</a>
+        </md-not-found>
+      </md-autocomplete>
+      <br/>
+    </form>
+  </md-content>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="answer('not useful')">
+       OK
+      </md-button>
+      <md-button ng-click="answer('useful')">
+        Cancel
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
