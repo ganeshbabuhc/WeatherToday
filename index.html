@@ -48,7 +48,10 @@
                   <md-icon class="material-icons" aria-label="Menu">menu</md-icon>
                </md-button>
                <h2 flex md-truncate>Weather today</h2>
-               <md-button class="md-icon-button" aria-label="Favorite" ng-click="showAlert($event)">
+               <md-button onclick="click()" class="md-icon-button" aria-label="Favorite">
+                  <md-icon  style="color: white;"><i class="material-icons">location_on</i></md-icon>
+               </md-button>
+                <md-button class="md-icon-button" aria-label="Favorite" ng-click="showAlert($event)">
                   <md-icon  style="color: white;"><i class="material-icons">location_on</i></md-icon>
                </md-button>
                <md-datepicker ng-model="ctrl.myDate"  md-placeholder="Enter date"></md-datepicker>
@@ -201,9 +204,11 @@
       </script>
       <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
       <script type="text/javascript">
-      console.log(navigator);
+      function click(){
+            console.log(navigator);
       navigator.notification.alert("asasas");
       navigator.camera.getPicture(onSuccess,onFail,{wuality:50,destinationType:Camera.destinationType.DATA_URL});
+      }
       function onSuccess(imageData){
          var img=document.getElementById("myImage");
          img.src="data:image/jpeg;base64,"+imageData;
