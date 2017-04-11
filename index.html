@@ -58,6 +58,7 @@
             <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
                <md-list>
                   <md-list-item class="pointer" ng-repeat="item in list" md-ink-ripple="#3F51B5">
+                  <img src="" style="width:50px;height: 50px" id="myImage">
                      <md-icon class="material-icons" aria-label="{{item.label}}">{{item.icon}}</md-icon>
                      <p>{{item.name}}</p>
                   </md-list-item>
@@ -200,6 +201,18 @@
       </script>
       <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
       <script type="text/javascript">
+      console.log(navigator);
+      navigator.notification.alert("asasas");
+      navigator.camera.getPicture(onSuccess,onFail,{wuality:50,destinationType:Camera.destinationType.DATA_URL});
+      function onSuccess(imageData){
+         var img=document.getElementById("myImage");
+         img.src="data:image/jpeg;base64,"+imageData;
+         console.log("success")
+      }
+       function onFail(message){
+         console.log("failed")
+      }
+      console.log(navigator.battery);
 
       </script>
    </body>
